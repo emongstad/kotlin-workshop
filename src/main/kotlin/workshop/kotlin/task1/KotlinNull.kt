@@ -17,6 +17,5 @@ class KotlinNull {
 
 fun main() {
     val str = KotlinNull().getVariablesAsUpperCase()
-    println(str)
     asserting(str == "GRATTIS " || str == "GRATTIS KOTLIN")
 }
