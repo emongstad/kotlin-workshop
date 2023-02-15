@@ -7,12 +7,6 @@ import util.asserting
  */
 class KotlinNull {
 
-    private val variable: String = "Grattis "
-    private val nullableVariable: String? = if (Math.random() > 0.5) "Kotlin" else null
-
-    fun getVariablesAsUpperCase(): String {
-        return variable.uppercase() + (nullableVariable?.uppercase() ?: "")
-    }
 }
 
 fun main() {

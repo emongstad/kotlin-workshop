@@ -10,15 +10,7 @@ class KotlinOverloading {
     /**
      * Implement a single override functions which covers the functionality in JavaOverloading's multiple override-functions
      */
-    fun override(
-            name: String = this.name,
-            age: Int = this.age,
-            gender: KotlinGender = this.gender): String {
-        this.name = name
-        this.age = age
-        this.gender = gender
-        return toString()
-    }
+    fun override() {}
 
     override fun toString() = "$name $age $gender"
 }

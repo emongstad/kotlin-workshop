@@ -13,23 +13,3 @@ fun main() {
 
     asserting(stringList.countPerCharacterInTheLongestWord() == listOf('a' to 3, 'd' to 3, 'e' to 2, 'w' to 1))
 }
-
-private fun List<String>.countPerCharacterInTheLongestWord() =
-    this.sortedBy { it.length }
-        .last()
-        .toCharArray()
-        .groupBy { it }
-        .map { it.key to it.value.count()}
-        .sortedBy { it.first }
-
-private fun List<Int>.getOdd() =
-    this.filter { it % 2 != 0 }
-
-private fun List<Int>.getSumOfEven() =
-    (this - this.getOdd()).sum()
-
-private fun List<String>.getNumberOfCharacters() =
-    this.map { it.length }
-
-private fun List<String>.findLastStringWhichContainsTheCharacter(c: Char) =
-    this.findLast { it.contains(c) }
